@@ -1,0 +1,242 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Test - Илья Рецер
+		link(rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico")
+
+		//build:css css/vendor.css
+		//bower:css
+		//endbower
+		//endbuild 
+
+		//build:css css/bundle.css 
+		link(rel='stylesheet', href='styles/styles.css')
+		//endbuild
+
+		//[if lte IE 9]
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+			[endif]
+
+		//build:remove
+		//endbuild
+	
+	body
+
+		header.layout-header
+			.container
+				.layout-header_row.row
+					.col-sm-2.col-md-2
+						a(href="/").b-logo
+							img(src="images/logo.png")
+					
+					.col-sm-4.col-md-3
+						form.b-search.i-icon-search
+							input(type="text" placeholder="Поиск").b-search_input
+							.b-search_tip.hidden-xs Например, теплый пол
+
+					.col-sm-2.col-md-3
+						a(href="#").layout-header_cost-calc-btn.i-icon-calc Расчет стоимости
+
+					.b-contacts
+						.b-contacts_block.first.hidden-xs.hidden-sm.col-md-2
+							.b-contacts_online-consultant
+								a(href="#").b-contacts_link On-line консультант
+							.b-contacts_skype-consultant 
+								a(href="#").b-contacts_link Skype консультант
+							.b-contacts_map
+								a(href="#").b-contacts_link Схема проезда
+						.b-contacts_block.last.col-sm-4.col-md-2
+							.b-contacts_phone 
+								span.code +7 (495)
+								span.number  645-12-12
+							.b-contacts_callback.hidden-xs
+								a(href="#").b-contacts_link Обратный звонок
+
+			nav.b-navbar
+				.container
+					.b-navbar_toggle-btn.b-menu_item.b-menu_link Меню
+						span.i-caret-right
+					ul.b-menu
+						li.b-menu_item 
+							a(href="#").b-menu_link О компании
+						li.b-menu_item.b-menu_dropdown 
+							span.b-menu_link Услуги
+								span.i-caret-right
+							ul.b-dropdown-menu
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Обогрев открытых площадок
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Защита водопровода от замерзания
+								li.b-dropdown-menu_item.b-dropdown-menu_submenu
+									span.b-menu_link Кабельный обогрев кровли
+										span.i-caret-right
+									ul.b-dropdown-menu
+										li.b-dropdown-menu_item
+											a(href="#").b-menu_link Обогрев кровли один
+										li.b-dropdown-menu_item
+											a(href="#").b-menu_link Второй обогрев кровли
+										li.b-dropdown-menu_item
+											a(href="#").b-menu_link Обогрев номер три
+										li.b-dropdown-menu_item
+											a(href="#").b-menu_link Кровля, которую обогревают
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Обогрев промышленных трубопроводов
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Обогрев промышленных резервуаров
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Система «Теплый пол»
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Система молниезащиты и заземления
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Промышленный обогрев
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Обогрев полов морозильных камер
+								li.b-dropdown-menu_item 
+									a(href="#").b-menu_link Нестандартные решения обогрева
+						li.b-menu_item 
+							a(href="#").b-menu_link Цены
+						li.b-menu_item 
+							a(href="#").b-menu_link Объекты
+						li.b-menu_item 
+							a(href="#").b-menu_link Каталоги
+						li.b-menu_item 
+							a(href="#").b-menu_link Контакты
+
+
+
+
+	
+		main.layout-main.container
+			.row
+				section.central-content.layout-main_blocks-wrap.col-xs-12.col-sm-8.col-sm-push-4.col-md-9.col-md-push-3
+					.services.row
+						h2.b-header Услуги
+
+						.b-preview.col-sm-6.col-md-4
+							img(src="images/img_service-1.jpg").b-preview_img
+							.b-preview_title Защита водопровода от замерзания
+							.b-preview_description.b-list
+								p.b-list_title Используется для:
+								ul.b-list_items
+									li подогрева пандусов
+									li ступенек
+									li дорожек
+							a(href="#").b-button Подробнее
+
+						.b-preview.col-sm-6.col-md-4
+							img(src="images/img_service-2.jpg").b-preview_img
+							.b-preview_title Обогрев промышленных трубопроводов
+							.b-preview_description.b-list
+								p.b-list_title Используется для:
+								ul.b-list_items
+									li подогрева пандусов
+									li ступенек
+									li дорожек
+							a(href="#").b-button Подробнее
+
+						.b-preview.col-sm-6.col-md-4
+							img(src="images/img_service-3.jpg").b-preview_img
+							.b-preview_title Обогрев резервуаров и бункеров
+							.b-preview_description.b-list
+								p.b-list_title Используется для:
+								ul.b-list_items
+									li подогрева пандусов
+									li ступенек
+							a(href="#").b-button Подробнее
+
+						.b-preview.col-sm-6.col-md-4
+							img(src="images/img_service-4.jpg").b-preview_img
+							.b-preview_title Кабельный обогрев кровли
+							.b-preview_description.b-list
+								p.b-list_title Используется для:
+								ul.b-list_items
+									li подогрева пандусов
+									li ступенек
+									li дорожек
+							a(href="#").b-button Подробнее
+
+						.b-preview.col-sm-6.col-md-4
+							img(src="images/img_service-5.jpg").b-preview_img
+							.b-preview_title Защита водопровода от замерзания
+							.b-preview_description.b-list
+								p.b-list_title Используется для:
+								ul.b-list_items
+									li подогрева пандусов
+									li ступенек
+									li дорожек
+							a(href="#").b-button Подробнее
+
+						.b-preview.col-sm-6.col-md-4
+							img(src="images/img_service-6.jpg").b-preview_img
+							.b-preview_title Обогрев промышленных трубопроводов
+							.b-preview_description.b-list
+								p.b-list_title Используется для:
+								ul.b-list_items
+									li подогрева пандусов
+									li ступенек
+									li дорожек
+							a(href="#").b-button Подробнее
+
+					.advantages.row
+						h2.b-header Преимущества
+						.b-advantage.icon.i-icon-advantage-1.col-md-4 Работы «под ключ»: от проекта до сдачи в эксплуатацию. Опыт поставок оборудования и монтажа 20 лет. Гарантия!
+						.b-advantage.icon.i-icon-advantage-2.col-md-4 Оборудование разныхпроизводителей. Собственный склад. Гибкие цены.
+						.b-advantage.icon.i-icon-advantage-3.col-md-4 Бесплатная PRO-техподдержка и сопровождение клиента. Обучение. Сервис 24 часа 7 дней в неделю. Штатные сертифицированные сотрудники.
+
+
+
+				aside.sidebar.layout-main_blocks-wrap.col-xs-12.col-sm-4.col-sm-pull-8.col-md-3.col-md-pull-9
+					.b-documentation
+						.b-documentation_item.i-icon-pdf 
+							div Трубопроводы
+							a(href="#").b-documentation_link Опросный лист
+						.b-documentation_item.i-icon-pdf 
+							div Резервуары
+							a(href="#").b-documentation_link Опросный лист
+
+					.b-announcement
+						h2.b-header.news Новости
+							a(href="#").b-button Все
+
+						.b-preview
+							.b-preview_img-wrap
+								img(src="images/img_news-1.jpg").b-preview_img
+								.b-announcement_date 
+									div.digit 13
+									div.month янв
+							.b-preview_title Защита водопровода от замерзания
+							.b-preview_description «МЗК-Электро» предоставляет услуги по проектированию и монтажу систем кабельного электрообогрева и молниезащиты.
+
+						.b-preview
+							.b-preview_img-wrap
+								img(src="images/img_news-1.jpg").b-preview_img
+								.b-announcement_date 
+									div.digit 13
+									div.month янв
+							.b-preview_title Защита водопровода от замерзания
+							.b-preview_description «МЗК-Электро» предоставляет услуги по проектированию и монтажу систем кабельного электрообогрева и молниезащиты.
+							
+					.b-banner
+						img(src="images/img_banner-1.jpg").b-banner_img
+						span.b-banner_text.b-banner_text--line-1 Молниезащита
+						span.b-banner_text.b-banner_text--line-2 и заземление
+
+				
+
+		
+		//build:js js/vendor.js
+		script(src='../assets/bower_components/jquery/dist/jquery.js')
+		script(src='scripts/modernizr-custom.js')
+		//endbuild 
+
+
+		//build:js js/common.js
+		script(src="scripts/scripts.js")
+		//endbuild
+
+
+		//build:remove
+		//endbuild
